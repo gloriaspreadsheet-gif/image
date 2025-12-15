@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Copy by Image</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background: transparent;
+    }
+
+    img {
+      cursor: pointer;
+      max-width: 100%;
+    }
+
+    .notice {
+      position: fixed;
+      bottom: 10px;
+      background: #333;
+      color: #fff;
+      padding: 6px 12px;
+      border-radius: 6px;
+      font-size: 14px;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+<img src="https://lh7-rt.googleusercontent.com/sitesz/AClOY7quxKfgvWnvFWF0O7CcmfTOBwqInydepCrRa2DXkPhPfTldjFQKbIgjHZKC48gnIRga5Lf2FnImx2KU4Qx8lVlVZGGp0b6IdXiJXx0ENlqj6IhW15O89OPdqj9zkTf7dcS3VICn2uGb7-pKHccrgrc_eb3jPtLGHWwaR6ayoZO-BokiBWmv4DQH51yvePix?key=AFNg0PVRrg49ffh4IKhp0w" alt="Copy" onclick="copyContent()">
+
+<div class="notice" id="notice">✅ Đã sao chép</div>
+
+<script>
+  function copyContent() {
+    const hiddenContent = `=IMAGE("https://lh7-rt.googleusercontent.com/sitesz/AClOY7quxKfgvWnvFWF0O7CcmfTOBwqInydepCrRa2DXkPhPfTldjFQKbIgjHZKC48gnIRga5Lf2FnImx2KU4Qx8lVlVZGGp0b6IdXiJXx0ENlqj6IhW15O89OPdqj9zkTf7dcS3VICn2uGb7-pKHccrgrc_eb3jPtLGHWwaR6ayoZO-BokiBWmv4DQH51yvePix?key=AFNg0PVRrg49ffh4IKhp0w")`
+Dòng 2
+Dòng 3 hoặc link, mã code, v.v...`;
+
+    navigator.clipboard.writeText(hiddenContent).then(() => {
+      const notice = document.getElementById("notice");
+      notice.style.display = "block";
+      setTimeout(() => notice.style.display = "none", 1500);
+    });
+  }
+</script>
+
+</body>
+</html>
