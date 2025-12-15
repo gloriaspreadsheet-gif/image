@@ -26,30 +26,20 @@ img {
 </head>
 <body>
 
+<!-- Ảnh bấm -->
 <img src="https://lh7-rt.googleusercontent.com/sitesz/AClOY7quxKfgvWnvFWF0O7CcmfTOBwqInydepCrRa2DXkPhPfTldjFQKbIgjHZKC48gnIRga5Lf2FnImx2KU4Qx8lVlVZGGp0b6IdXiJXx0ENlqj6IhW15O89OPdqj9zkTf7dcS3VICn2uGb7-pKHccrgrc_eb3jPtLGHWwaR6ayoZO-BokiBWmv4DQH51yvePix?key=AFNg0PVRrg49ffh4IKhp0w" alt="Copy" onclick="copyContent()">
 
+<!-- Textarea ẩn -->
 <textarea id="temp"></textarea>
 
 <script>
 function copyContent() {
-  function copyContent() {
   const hiddenContent = '=IMAGE("https://lh7-rt.googleusercontent.com/sitesz/AClOY7odQWmP5QnFx-DevL-1twq6kxm3a34das4NZ8na9vIbrzCyw2UFQYZ1HG_AT4_twm32LiF7SX4vY7NLzcNaZPeSatJ4SlLPItE1tUeackt4TFgbnkzYtqI2dPlAVzoRhSmfxo6p4hRcdu51eLBsvhXunS5eOGUtdFjswfXfDU9bVEENZeu7KRQgXSMYY3SH?key=AFNg0PVRrg49ffh4IKhp0w")';
 
   const temp = document.getElementById("temp");
-  temp.value = hiddenContent;
+  temp.value = hiddenContent;  // Chỉ copy giá trị này
   temp.select();
   temp.setSelectionRange(0, 99999);
-
-  document.execCommand("copy");
-  alert("✅ Đã sao chép");
-}
-
-
-  const temp = document.getElementById("temp");
-  temp.value = text;
-  temp.select();
-  temp.setSelectionRange(0, 99999);
-
   document.execCommand("copy");
 
   alert("✅ Đã sao chép");
@@ -58,6 +48,3 @@ function copyContent() {
 
 </body>
 </html>
-
-
-
