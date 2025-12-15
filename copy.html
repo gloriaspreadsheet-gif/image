@@ -32,7 +32,18 @@ img {
 
 <script>
 function copyContent() {
-  const text = `=IMAGE("https://lh7-rt.googleusercontent.com/sitesz/AClOY7odQWmP5QnFx-DevL-1twq6kxm3a34das4NZ8na9vIbrzCyw2UFQYZ1HG_AT4_twm32LiF7SX4vY7NLzcNaZPeSatJ4SlLPItE1tUeackt4TFgbnkzYtqI2dPlAVzoRhSmfxo6p4hRcdu51eLBsvhXunS5eOGUtdFjswfXfDU9bVEENZeu7KRQgXSMYY3SH?key=AFNg0PVRrg49ffh4IKhp0w");
+  function copyContent() {
+  const hiddenContent = '=IMAGE("https://lh7-rt.googleusercontent.com/sitesz/AClOY7odQWmP5QnFx-DevL-1twq6kxm3a34das4NZ8na9vIbrzCyw2UFQYZ1HG_AT4_twm32LiF7SX4vY7NLzcNaZPeSatJ4SlLPItE1tUeackt4TFgbnkzYtqI2dPlAVzoRhSmfxo6p4hRcdu51eLBsvhXunS5eOGUtdFjswfXfDU9bVEENZeu7KRQgXSMYY3SH?key=AFNg0PVRrg49ffh4IKhp0w")';
+
+  const temp = document.getElementById("temp");
+  temp.value = hiddenContent;
+  temp.select();
+  temp.setSelectionRange(0, 99999);
+
+  document.execCommand("copy");
+  alert("✅ Đã sao chép");
+}
+
 
   const temp = document.getElementById("temp");
   temp.value = text;
@@ -47,5 +58,6 @@ function copyContent() {
 
 </body>
 </html>
+
 
 
